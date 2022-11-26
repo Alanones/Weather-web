@@ -66,7 +66,7 @@ app.get("*", (req, res) => {
   res.render("error", { message: "Page not found", name: "Alan" });
 });
 
-const port = process.env.PORT;
-app.listen(port || 3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log("Running on port " + port);
 });
